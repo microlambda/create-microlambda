@@ -1,0 +1,7 @@
+{
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "collectCoverage": true,
+  "coverageReporters": ["html", "lcov"],
+  "testPathIgnorePatterns": ["/node_modules/", "/starters/"]
+}
