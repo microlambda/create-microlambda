@@ -47,7 +47,6 @@ export const generateProject = async (): Promise<void> => {
       from: /my-app/g,
       to: answers.name,
     });
-    console.debug(res);
     cloning.succeed(chalk.bold("Project initialized ✨"));
   } catch (e) {
     cloning.fail(chalk.red.bold("Failed to create project"));
