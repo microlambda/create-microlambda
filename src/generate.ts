@@ -42,8 +42,8 @@ export const generateProject = async (): Promise<void> => {
     const cloner = degit(`microlambda/starter-project#main`);
     await cloner.clone(dest);
     await command("git init", execaOptions);
-    const res = await replaceInFile({
-      files: `${dest}/**`,
+    await replaceInFile({
+      files: join(dest, '**'),
       from: /my-app/g,
       to: answers.name,
     });
